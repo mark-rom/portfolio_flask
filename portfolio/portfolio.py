@@ -4,7 +4,8 @@ from datetime import datetime
 from email.message import EmailMessage
 
 from dotenv import load_dotenv
-from flask import Blueprint, redirect, render_template, request
+from flask import (Blueprint, current_app, redirect, render_template, request,
+                   send_file)
 
 load_dotenv()
 
@@ -53,3 +54,11 @@ def sendmail():
         print('failed to send')
 
     return redirect('/')
+
+
+@bp.route('/download/<path:filename>', methods=['GET', 'POST'])
+def download(filename):
+    static = os.path.join(current_app.root_path, 'static')
+    filepath = os.path.join(static, filename)
+
+    return send_file(filepath, as_attachment=True)

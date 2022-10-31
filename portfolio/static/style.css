@@ -44,6 +44,11 @@
     width: 100%;
 }
 
+.imageAbout {
+    height: 450px;
+    overflow: hidden;
+}
+
 /* services section css */
 .servicesText.card {
     height: 280px;
@@ -58,10 +63,10 @@
     text-align: center;
 }
 .card:hover .servicesIcon {
-    color: #008000;
+    color: #1186b0;
 }
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #1186b0;
 }
 
 /* social media icons styling */
@@ -70,7 +75,7 @@
     cursor: pointer;
 }
 .fa-linkedin:hover, .fa-github:hover {
-    color: #008000;
+    color: #1186b0;
 }
 .fab {
     color: #000000;
@@ -83,10 +88,15 @@
 }
 
 /* spacing on all sections */
-#about, #services, #portfolio, #contact {
+#about, #skills, #portfolio, #contact {
     margin-top: 4rem;
     padding-top: 4rem;
 }
 #contact {
     padding-bottom: 4rem;
+}
+
+.inline {
+    display: inline-block;
+    padding: 0px 0px 0px 40px;
 }

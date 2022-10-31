@@ -13,294 +13,315 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
   <title>Portfolio</title> 
-</head> 
+</head>
+
 <body>
-    
   <!-- Navbar Section -->
   <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
     <div class="container">
-        <a class="navbar-brand" href="#" style="color:#ffffff">Pavel</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home" style="color:#ffffff">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" style="color:#ffffff">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services" style="color:#ffffff">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio" style="color:#ffffff">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact" style="color:#ffffff">Contact</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#" style="color:#ffffff">Pavel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="#home" style="color:#ffffff">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#about" style="color:#ffffff">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#skills" style="color:#ffffff">Skills and Technologes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#portfolio" style="color:#ffffff">Portfolio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#contact" style="color:#ffffff">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav> 
   <!-- main banner -->
   <section class="bgimage" id="home">
     <div class="container-fluid">
-        <div class="row">
+      <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-            <h2 class="hero_title">Hi, I'm Pavel</h2>
-            <p class="hero_desc">Junior Python Develeper</p>
+          <h2 class="hero_title">Hi, I'm Pavel</h2>
+          <p class="hero_desc">Junior Python Develeper</p>
         </div>
-        </div>
+      </div>
     </div>
   </section>
 
   <!-- about section-->
   <section id="about">
     <div class="container mt-4 pt-4">
-        <h1 class="text-center">About Me</h1>
-        <div class="row mt-4">
-            <div class="col-lg-4">
-                <img src="../static/images/about.jpg" class= "imageAboutPage" alt="">
-            </div>
-
+      <h1 class="text-center">About Me</h1>
+      <div class="row mt-4">
+        <div class="col-lg-4 imageAbout">
+            <img src="../static/images/about.jpg" class="imageAboutPage" alt="">
+        </div>
+          <div class="col-lg-8">
+            <ul>
+              <li>Name: Pavel Sergeev</li>
+              <li>Age: {{ my_age }}</li>
+              <li>Occupation: Backend Developer</li>
+            </ul>
+            <p>
+              I'm interested in REST API development for web services. I also like to unify and ideally automate routine processes. As ex-lawyer I’ve got strong analytical and research skills and systems thinking as well.
+            </p>
+            <p>
+              I have completed “Python developer” course at Practicum Bootcamp, where I worked:
+            </p>
             <div class="col-lg-8">
-                <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                    
-                </p>
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <ul>
-                            <li>Name: Pavel Sergeev</li>
-                            <li>Age: {{ my_age }}</li>
-                            <li>Occupation: Web Developer</li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </p>
-                </div>
+              <ul>
+                <li>solo and as team member;</li>
+                <li>with 2-week sprints;</li>
+                <li>with mentors and code reviewers;</li>
+                <li>combining studying with full-time job.</li>
+              </ul>
             </div>
+            <div class="text-center mt-5">
+              <a href="{{ url_for('portfolio.download', filename='CV_Pavel_Sergeev_python_backend.pdf') }}" class="btn btn-info btn-lg">Download CV</a>
+            </div>
+          </div>
         </div>
   </section>
+
   <!-- services section-->
-  <section id="services">
+  <section id="skills">
     <div class="container">
-        <h1 class="text-center">Services</h1>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class="fas servicesIcon fa-clock"></i>
-                        <h4 class="card-title mt-3">Website Development</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
+      <div class="row">
+        <h1 class="text-center">Skills and Technologes</h1>
+        <div class="col-lg-4 mt-4">
+          <div class="card servicesText">
+            <div class="card-body">
+              <i class="fab servicesIcon fa-python"></i>
+              <h4 class="card-title mt-3">Python</h4>
+              <p class="card-text mt-3">
+                I know OOP principles, basic algorithms and data structures. Worked with lambda functions and decorators. Studying asyncio.
+              </p>
             </div>
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-layer-group'></i>
-                        <h4 class="card-title mt-3">Website Design</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+          <div class="card servicesText">
+            <div class="card-body">
+              <i class="fas servicesIcon fa-server"></i>
+              <h4 class="card-title mt-3">Django + DRF</h4>
+              <p class="card-text mt-3">
+                Build my projects according to REST(ful) and SOLID principles. Know how to build monolithic apps, and optimise db queries with ORM and more.
+              </p>
             </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+          <div class="card servicesText">
+            <div class="card-body">
+              <i class='fab servicesIcon fa-docker'></i>
+              <h4 class="card-title mt-3">Docker</h4>
+              <p class="card-text mt-3">
+                Apps containerisation with Docker and Docker Compose, setting volumes, using DockerHub.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='far servicesIcon fa-check-circle'></i>
-                        <h4 class="card-title mt-3">Website Deployment</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
+      <div class="row">
+        <div class="col-lg-4 mt-4">
+          <div class="card servicesText">
+            <div class="card-body">
+              <i class='fab servicesIcon fa-git-alt'></i>
+              <h4 class="card-title mt-3">Git</h4>
+              <p class="card-text mt-3">
+                Working with local and remote repositories, and branches. Solving merge conflicts.
+              </p>
             </div>
+          </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-search'></i>
-                        <h4 class="card-title mt-3">SEO</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
+        <div class="col-lg-4 mt-4">
+          <div class="card servicesText">
+            <div class="card-body">
+              <i class='fas servicesIcon fa-wrench'></i>
+              <h4 class="card-title mt-3">CI/CD</h4>
+              <p class="card-text mt-3">
+                Nginx configuration, setting pipelines using GitHub Actions. Setting workflow with mandatory tests and linters. Linux command shell basics.
+              </p>
             </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-shield-alt'></i>
-                        <h4 class="card-title mt-3">DevOps</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-wrench'></i>
-                        <h4 class="card-title mt-3">QA</h4>
-                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>  
-            </div>
+          </div>  
         </div>
+
+        <div class="col-lg-4 mt-4">
+          <div class="card servicesText">
+            <div class="card-body">
+              <i class='fas servicesIcon fa-search'></i>
+              <h4 class="card-title mt-3">QA</h4>
+              <p class="card-text mt-3">
+                Writing autotest with unittest and Django, manual API testing with Postman.
+              </p>
+            </div>
+          </div>  
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- portfolio section-->
   <section id="portfolio">
     <div class="container mt-3">
-        <h1 class="text-center">Portfolio</h1>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card">
-                    <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Foodgram API</h4>
-                        <p class="card-text">
-                          An API for recipes website with provided frontend.
-                        </p>
-                        <div class="text-center">
-                            <a href="http://foodgram.servehttp.com/" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
+      <h1 class="text-center">Portfolio</h1>
+      <div class="row">
+        <div class="col-lg-4 mt-4">
+          <div class="card">
+            <img class="card-img-top" src="{{ url_for ('static', filename='images/foodgram.jpg')}}" alt="Foodgram screen" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Foodgram REST API</h4>
+              <p class="card-text">
+                An API for recipes website where you can create your recipes, subscribe to other users and add recipes to your shopping cart.
+              </p>
+              <div>
+                <div class="inline">
+                    <a href="http://foodgram.servehttp.com/" class="btn btn-info">Foodgram</a>
                 </div>
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Quiz App</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
+                <div class="inline">
+                    <a href="https://github.com/mark-rom/Foodgram-monorep" class="btn btn-info">GitHub</a>
                 </div>
+              </div>
             </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Product Landing Page</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Messaging Service</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Twitter Clone</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-lg-4 mt-4">
+          <div class="card portfolioContent">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/yamdb.jpg')}}" alt="YaMDb screen" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">YaMDb REST API</h4>
+              <p class="card-text">An API for a content rating service including a search, filters and a permission system.</p>
+              <div class="text-center">
+                  <a href="https://github.com/mark-rom/YaMDb_CI_CD" class="btn btn-info">GitHub</a>
+              </div>
             </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Blog App</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="col-lg-4 mt-4">
+          <div class="card portfolioContent">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/yatube.jpg')}}" alt="YaTube screen" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Monolithic social network</h4>
+              <p class="card-text">YaTube is a social network like LiveJournal.</p>
+              <div class="text-center">
+                  <a href="https://github.com/mark-rom/YaTube" class="btn btn-info">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-4 mt-4">
+          <div class="card portfolioContent">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/screenshot_bot.jpg')}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Imager bot clone</h4>
+              <p class="card-text">The bot simply takes screenshot of the sent link and sends it as a reply.</p>
+              <div class="text-center">
+                  <a href="https://github.com/mark-rom/screenshot_bot" class="btn btn-info">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4">
+          <div class="card portfolioContent">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/egrul_bot.jpg')}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Egrul bot</h4>
+              <p class="card-text">The bot recieves an INN or OGRN (company indentification numbers) and sends back info about the company from FTS site egrul.nalog.ru.</p>
+              <div>
+                <div class="inline">
+                    <a href="https://t.me/EGRUL_inf_bot" class="btn btn-info">The bot</a>
+                </div>
+                <div class="inline">
+                    <a href="https://github.com/mark-rom/egrul_bot" class="btn btn-info">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4">
+          <div class="card portfolioContent">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/portfolio.jpg')}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Portfolio site</h4>
+              <p class="card-text">
+                The portfolio site on Flask, HTML, CSS and a bit of JS.
+              </p>
+              <div>
+                <div class="inline">
+                    <a href="/" class="btn btn-info">My portfolio</a>
+                </div>
+                <div class="inline">
+                    <a href="https://github.com/mark-rom/flask_portfolio" class="btn btn-info">GitHub</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
   </section>
   <!-- contact section-->
   <section id="contact">
     <div class="container mt-3 contactContent">
-        <h1 class="text-center">Contact Me</h1>
-
-        <div class="row mt-4">
-          <div class="col-lg-6">
-              <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-              <div style="text-decoration:none; overflow:hidden;max-width:100%;width:500px;height:400px;">
-                <div id="embed-ded-map-canvas" style="height:100%; width:100%;max-width:100%;">
-                  <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Yerevan,+Армения&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-                </div>
-                <a class="embedded-map-code" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a>
-                <style>
-                  #embed-ded-map-canvas img{max-height:none;max-width:none!important;background:none!important;}
-                </style>
-              </div>
+      <h1 class="text-center">Contact Me</h1>
+      <div class="row mt-4">
+        <div class="col-lg-6">
+          <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+          <div style="text-decoration:none; overflow:hidden;max-width:100%;width:500px;height:400px;">
+            <div id="embed-ded-map-canvas" style="height:100%; width:100%;max-width:100%;">
+              <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Yerevan,+Армения&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
             </div>
-
-            <div class="col-lg-6">
-              <!-- form fields -->
-              <form action="/sendemail/" method="POST">
-                <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" />
-                <input type="email" class="form-control mt-3" name="_replyto" placeholder="Email" />
-                <input type="text" class="form-control mt-3" name="Subject" placeholder="Subject" />
-                <div class="mb-3 mt-3">
-                    <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Project Details"></textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">
-                  Send
-                </button>
-              </form>
-            </div>
-
+            <a class="embedded-map-code" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a>
+            <style>
+              #embed-ded-map-canvas img{max-height:none;max-width:none!important;background:none!important;}
+            </style>
+          </div>
         </div>
+
+        <div class="col-lg-6">
+          <!-- form fields -->
+          <form action="/sendemail/" method="POST">
+            <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" />
+            <input type="email" class="form-control mt-3" name="_replyto" placeholder="Email" />
+            <input type="text" class="form-control mt-3" name="Subject" placeholder="Subject" />
+            <div class="mb-3 mt-3">
+              <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Project Details"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Send
+            </button>
+          </form>
+          <div class="social-icons mt-4">
+            on other platforms
+            <a href="https://www.linkedin.com/in/sergeev-pavel/?locale=en_US" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://t.me/mark_rom" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://github.com/mark-rom" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- footer section-->
   <footer id="footer">
     <div class="container-fluid">
-        <!-- social media icons -->
-        <div class="social-icons mt-4">
-            <a href="https://www.linkedin.com/in/sergeev-pavel/?locale=en_US" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/mark-rom" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
+      <!-- social media icons -->
+      Thanks to <a href="https://www.freecodecamp.org">freeCodeCamp</a> and <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a> for guides and templates.
     </div>
   </footer>
   <!-- load javascript after loading all html content -->
